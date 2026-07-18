@@ -1,10 +1,16 @@
 const tomato = document.getElementById("tomato");
 
-function press(){
+const pop = new Audio("pop.mp3");
+
+function press() {
+
     tomato.classList.add("pressed");
+
+    pop.currentTime = 0;
+    pop.play();
 }
 
-function release(){
+function release() {
     tomato.classList.remove("pressed");
 }
 
