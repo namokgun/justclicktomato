@@ -19,9 +19,17 @@ body{
     cursor:pointer;
     user-select:none;
     transition:transform 0.08s ease;
+    user-select: none;
+    -webkit-user-select: none;
+
+    -webkit-user-drag: none;
+    user-drag: none;
+
+    -webkit-touch-callout: none;
+
+    touch-action: manipulation;
 }
 
 #tomato.pressed{
     transform:scaleX(1.08) scaleY(0.88);
 }
-
