@@ -1,4 +1,4 @@
-const tomato = document.getElementById("tomato");
+const dino = document.getElementById("dino");
 
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -18,29 +18,27 @@ document.addEventListener("pointerdown", () => {
     }
 }, { once: true });
 
-
 function playSound() {
     if (!popBuffer) return;
 
     const source = audioContext.createBufferSource();
     source.buffer = popBuffer;
-
     source.connect(audioContext.destination);
     source.start(0);
 }
 
-
+// 누를 때
 function press() {
-    tomato.classList.add("pressed");
+    dino.src = "dino2.png";
     playSound();
 }
 
-
+// 뗄 때
 function release() {
-    tomato.classList.remove("pressed");
+    dino.src = "dino1.png";
 }
 
-tomato.addEventListener("pointerdown", press);
-tomato.addEventListener("pointerup", release);
-tomato.addEventListener("pointerleave", release);
-tomato.addEventListener("pointercancel", release);
+dino.addEventListener("pointerdown", press);
+dino.addEventListener("pointerup", release);
+dino.addEventListener("pointerleave", release);
+dino.addEventListener("pointercancel", release);
