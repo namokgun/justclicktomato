@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    overflow:hidden;
+}
+
+#tomato{    
+    width:300px;
+    cursor:pointer;
+    user-select:none;
+    transition:transform 0.08s ease;
+}
+
+#tomato.pressed{
+    transform:scaleX(1.08) scaleY(0.88);
+}
